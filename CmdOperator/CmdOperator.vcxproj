@@ -115,6 +115,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="..\.gitattributes" />
+    <None Include="..\.gitignore" />
+    <None Include="..\helpDocument\Function\addItem.html" />
+    <None Include="..\helpDocument\Function\cmdOperation.html" />
+    <None Include="..\helpDocument\Function\Constructor.html" />
+    <None Include="..\helpDocument\Function\editItem.html" />
+    <None Include="..\helpDocument\Function\environment.html" />
+    <None Include="..\helpDocument\Function\errHandle.html" />
+    <None Include="..\helpDocument\Function\removeItem.html" />
+    <None Include="..\helpDocument\Manual.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CmdOperator.h" />
+    <ClInclude Include="..\pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\example.cpp" />
+    <ClCompile Include="..\pch.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,9 +9,59 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="文档">
+      <UniqueIdentifier>{b414c0ca-cc09-49a3-9d0e-f7f5cdc499ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源代码库">
+      <UniqueIdentifier>{6fe74bdf-f054-4e79-94b8-e1f57c6cc8fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\helpDocument\Manual.html">
+      <Filter>文档</Filter>
+    </None>
+    <None Include="..\helpDocument\Function\addItem.html">
+      <Filter>文档</Filter>
+    </None>
+    <None Include="..\helpDocument\Function\cmdOperation.html">
+      <Filter>文档</Filter>
+    </None>
+    <None Include="..\helpDocument\Function\Constructor.html">
+      <Filter>文档</Filter>
+    </None>
+    <None Include="..\helpDocument\Function\editItem.html">
+      <Filter>文档</Filter>
+    </None>
+    <None Include="..\helpDocument\Function\environment.html">
+      <Filter>文档</Filter>
+    </None>
+    <None Include="..\helpDocument\Function\removeItem.html">
+      <Filter>文档</Filter>
+    </None>
+    <None Include="..\.gitattributes">
+      <Filter>源代码库</Filter>
+    </None>
+    <None Include="..\.gitignore">
+      <Filter>源代码库</Filter>
+    </None>
+    <None Include="..\helpDocument\Function\errHandle.html">
+      <Filter>文档</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CmdOperator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\example.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
