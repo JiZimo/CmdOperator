@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cmdOperator命令行操作</title>
+</head>
+<body>
+    <b>int exitCommandLine()</b>
+    <p>描述：退出命令行</p>
+    <h4>异常</h4>
+    <p>该函数不会抛出异常</p>
+    <h4>返回值</h4>
+    <p>返回__result值</p>
+    <h4>示例</h4>
+    <pre>
+    <code>
+        //下面是一般的退出命令行函数实现方法
+        auto exit=[](CmdOperator *cmd,std::list&lt;std::string&gt; argList){
+            return cmd->exitCommandLine;
+        };
+        //然后可以将此函数注册为退出指令
+        //如：
+        //aCmdOperatorObject.addCommand("exit",exit);
+    </code>
+    </pre>
+    <b>int execute(std::ostream &amp;out,std::istream &amp;in)</b>
+    <p>描述：执行CmdOperator，并以out为输出流，in为输入流</p>
+    <h4>异常</h4>
+    <p>如果注册的函数或错误处理函数中可能抛出异常，则该函数就会抛出异常</p>
+    <h4>返回值</h4>
+    <p>返回__result值</p>
+    <h4>示例</h4>
+    <pre>
+        <code>
+            #include &lt;iostream&gt;
+            CmdOperator cmd;
+            //注册一些函数
+            cmd.execute(std::cout,std::cin);
+        </code>
+    </pre>
+</body>
+</html>

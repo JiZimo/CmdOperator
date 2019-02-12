@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CmdOperator注册命令手册页</title>
+</head>
+<body>
+    <b>commandHandler addCommand(const std::string &amp;str, const commadnHandler func)</b>
+    <p>描述：注册一个命令，当该命令被用户使用时会将命令后的参数以链表（std::list&lt;std::string&gt;）的形式传入func来调用func</p>
+    <h4>异常</h4>
+    <p>该函数发现提供的str已注册时，会抛出std::invalid_argument</p>
+    <h4>返回值</h4>
+    <p>该函数返回被注册的函数</p>
+    <h4>示例</h4>
+    <code>CmdOperator cmd;</code>
+    <p></p>
+    <code>CmdOperator::commandHandler func=...;</code>
+    <p></p>
+    <code>cmd.addCommand("command",func);</code>
+    <p></p>
+    <b>commandHandler addCommand(const std::pair&lt;const std::string, const commandHandler&gt; p)</b>
+    <p>描述：等同于上面的函数，只不过以std::pair类型来传递参数</p>
+    <h4>异常</h4>
+    <p>该函数会在p.first已被注册时抛出std::invalid_argument</p>
+    <h4>返回值</h4>
+    <p>该函数返回提供的pair</p>
+    <h4>示例</h4>
+    <pre>
+    <code>
+    CmdOperator cmd;
+    CmdOperator::commandHandler func=...;
+    cmd.addCommand(std::make_pair("command",func));
+    </code>
+    </pre>
+    <b>std::map&lt;std::string, const commanadHandler&gt; addCommand(const std::map&lt;const std::string, const commandHandler&gt; list</b>
+    <p>描述：注册list中的每一项</p>
+    <h4>异常</h4>
+    <p>该函数会在任意一项已被注册时抛出std::invalid_argument</p>
+    <h4>返回值</h4>
+    <p>该函数返回用户提供的列表list</p>
+    <h4>示例</h4>
+    <pre>
+    <code>
+    std::map&lt;std::string, const commanadHandler&gt; list={...}
+    CmdOperator cmd;
+    cmd.addCommand(list);
+    </code>
+    </pre>
+</body>
+</html>

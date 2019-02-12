@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CmdOperator构造函数手册页</title>
+</head>
+<body>
+    <h2>CmdOperator构造函数手册页</h2>
+    <b>CmdOperator()</b>
+    <p>描述：该函数是CmdOperator的默认构造函数，该函数将构造一个以"&gt;"为提示符的命令行系统</p>
+    <h4>示例</h4>
+    <code>CmdOperator cmd();</code>
+    <b>
+        CmdOperator(const std::string &amp;_op, const std::function&lt;int (const std::string&amp;)&gt; _eh = nullptr,
+        const std::map&lt;std::string, commandHandler&gt; _sheet = {})
+    </b>
+    <p>描述：该构造函数要求用户提供要构造的命令行系统的命令提示符。_eh为可选项，该项为被构造的命令行系统的错误处理函数，即，当用户输入的命令与已注册项不能成功匹配时，调用该函数，并传入该无法匹配的命令。_sheet提供将被命令行系统注册的命令，默认为空，即不提供。</p>
+    <h4>示例</h4>
+    <code>CmdOperator cmd1("_&gt;");</code>
+    <p>或</p>
+    <code>CmdOperator cmd2("_&gt;",[](const std::string &amp;command)-&gt;int{std::cout&lt;&lt;command&lt;&lt;" invalid"&lt;&lt;std::endl; return 0;},{{"command",aFunction}});</code>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CmdOperator中文手册</title>
+    </head>
+    <body>
+        <!--简介部分，Part1-->
+        <h2>简介</h2>
+        <h3>·简介</h3>
+        <p>CmdOperator是一款非常简洁易用的程序库，它用于实现各种命令行程序的交互部分</p>
+        <h3>·如何使用</h3>
+        <p>若需要在您的程序中使用该程序库，只需将在此项目根文件夹下的文件CmdOperator.h拷贝到您的工作目录中，然后添加</p>
+        <code>#include "CmdOperator.h"</code>
+        <p>即可使用该程序库</p>
+        <!--创建对象部分，Part2-->
+        <h2>创建CmdOperator对象</h2>
+        <h3>·构造函数</h3>
+        <p>有两种构造函数可以使用</p>
+        <b>CmdOperator()</b>
+        <p>介绍：可以构造一个默认的CmdOperator对象</p>
+        <a href="Function/Constructor.html"><strong>详见</strong></a>
+        <p></p><!--相当于换行符-->
+        <b>CmdOperator(const std::string &amp;_op, const std::function&lt;int(const std::string&amp;)&gt; _eh = nullptr,
+                const std::map&lt;std::string, commandHandler&gt; _sheet = {})</b>
+        <p>介绍：在该函数中必须提供命令提示符，_sheet是一个命令与处理函数对应关系的注册表（以下简称注册表），默认为空，eh为错误处理函数，即，当注册表中没有与用户输入的项目对应时会调用错误处理函数，并传递该无法对应的命令</p>
+        <a href="Function/Constructor.html"><strong>详见</strong></a>
+        <p></p>
+        <b>注意：CmdOperator类不提供拷贝构造函数和赋值运算符，所以你不能创造某一CmdOperator对象的拷贝</b>
+        <!--成员函数部分，Part3-->
+        <h2>成员函数操作</h2>
+        <h3>·命令操作</h3>
+        <h4>-添加项目操作</h4>
+        <b>commandHandler addCommand(const std::string &amp;str, const commadnHandler func)</b>
+        <p>介绍：注册一条命令，在该命令被用户使用时，将调用func，其中commandHandle为函数类型，该函数接受一个CmdOperator类的指针为当前命令行，以及一个只读的std::list&lt;std::string&gt;类型，该链表中储存着用户提供的参数，如，当用户提供 command arg1 arg2是，对应着command的注册表项中的函数的第二个参数就会被赋值为{"arg1","arg2"}</p>
+        <a href="Function/addItem.html"><strong>详见</strong></a>
+        <p></p>
+        <b>commandHandler addCommand(const std::pair&lt;const std::string, const commandHandler&gt;</b>
+        <p>介绍：同上，不过将两个参数整合为一个std::pair</p>
+        <a href="Function/addItem.html"><strong>详见</strong></a>
+        <p></p>
+        <b>std::map&lt;std::string, const commanadHandler&gt; addCommand(const std::map&lt;const std::string, const commandHandler&gt; list</b>
+        <p>介绍：注册list中的项目，返回该list</p>
+        <a href="Function/addItem.html"><strong>详见</strong></a>
+        <p></p>
+        <h4>-更改项目操作</h4>
+        <b>commandHandler replaceCommand(const std::string &amp;index, const commandHandler newFunc)</b>
+        <p>介绍：更改由index指定的注册项为newFunc</p>
+        <a href="Function/editItem.html"><strong>详见</strong></a>
+        <p></p>
+        <b>commandHandler replaceCommand(const std::pair&lt;const std::string, const commandHandler&gt; p)</b>
+        <p>介绍：同上，不过以std::pair传递参数</p>
+        <a href="Funciton/editItem.html"><strong>详见</strong></a>
+        <p></p>
+        <b>std::map&lt;const std::string, const commandHandler&gt; replaceCommand(const std::map&lt;const std::string, const commandHandler&gt; list)</b>
+        <b>介绍：更改list指定的项目，返回list</b>
+        <a href="Function/editItem.html"><strong>详见</strong></a>
+        <p></p>
+        <h4>-删除项目操作</h4>
+        <b>int removeCommand(const std::string &amp;index)</b>
+        <p>简介：删除由index指定的注册项，若成功则返回0，若否，则返回其他数值</p>
+        <a href="Function/removeItem.html"><strong>详见</strong></a>
+        <h3>·命令行控制操作</h3>
+        <b>int exitCommandLine()</b>
+        <p>简介：退出命令行</p>
+        <a href="Function/cmdOperation.html"><strong>详见</strong></a>
+        <b>int execute(std::ostream &amp;out, std::istream &amp;in)</b>
+        <p>简介：执行命令行，其中out为交互时输出流，in为输入流</p>
+        <a href="Function/CmdOperation.html"><strong>详见</strong></a>
+        <h3>·环境变量操作</h3>
+        <b>std::string getEnv(const std::string &amp;name)</b>
+        <p>简介：获取由name指定的环境变量</p>
+        <a href="Function/cmdOperation.html"><strong>详见</strong></a>
+        <b>std::string setEnv(const std::string &name,const std::string &value)</b>
+        <p>简介：更改name指定的变量值为value</p>
+        <a href="Function/cmdOperation.html"><strong>详见</strong></a>
+    </body>
+</html>

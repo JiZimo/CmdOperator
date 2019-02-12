@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CmdOperator操作环境变量手册</title>
+</head>
+<body>
+    <b>std::string getEnv(const std::string &amp;name)</b>
+    <p>描述：获取name指定的环境变量</p>
+    <h4>异常</h4>
+    <p>若name不存在会抛出std::out_of_range异常</p>
+    <h4>返回值</h4>
+    <p>返回环境变量的值</p>
+    <h4>示例</h4>
+    <pre>
+    <code>
+        std::string value=getEnv("__result");
+    </code>
+    </pre>
+    <b>std::string setEnv(const std::string &name,const std::string &value)</b>
+    <p>描述：设置环境变量name的值为value,若name不存在则会创建一个新的环境变量</p>
+    <h4>异常</h4>
+    <p>若name无写入权限则抛出std::invalid_argument异常，如，name指定为系统只读变量</p>
+    <h4>返回值</h4>
+    <p>返回写入的值</p>
+    <h4>系统变量</h4>
+    <ul>
+        <li>__result：每次命令执行完毕后的返回值</li>
+    </ul>
+    <pre>
+    <code>
+        setEnv("index");
+    </code>
+    </pre>
+</body>
+</html>
