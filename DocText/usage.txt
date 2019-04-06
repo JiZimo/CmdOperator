@@ -1,0 +1,4 @@
+如何使用：
+  将该项目中根目录下的CmdOperator.h文件拷贝至你的工作目录下，之后在使用该库的.cpp源文件中加入
+    #include "CmdOperator.h"
+即可使用该库

@@ -1,0 +1,14 @@
+-原型
+    commandHandler replaceCommand(const std::string &index, const commandHandler newFunc);
+    commandHandler replaceCommand(const std::pair<const std::string, const commandHandler> p);
+    std::map<const std::string, const commandHandler> replaceCommand(const std::map<const std::string, const commandHandler> list);
+-介绍
+    更改index命令所对应的命令处理函数，返回值为该命令处理函数
+    第二条以std::pair传递参数，返回值为该命令处理函数
+    第三条批量更改命令，返回给定的std::map
+-版本
+    v0.0.1.00003 加入
+	v1.0.0.00008 弃用，现在应当使用editCommand
+-相关
+    commandHandler
+	replaceCommand

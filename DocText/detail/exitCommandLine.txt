@@ -1,0 +1,8 @@
+-原型
+  int exitCommandLine();
+-介绍
+  用于退出命令行，具体用法见example exitCommandLine
+-版本
+  v0.0.1.00003 加入
+-相关
+  无

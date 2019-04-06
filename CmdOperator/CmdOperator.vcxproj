@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{57A5E9F5-1473-4C0B-A6A1-DAD9AAEE2C97}</ProjectGuid>
     <RootNamespace>CmdOperator</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -117,22 +117,31 @@
   <ItemGroup>
     <None Include="..\.gitattributes" />
     <None Include="..\.gitignore" />
-    <None Include="..\helpDocument\Function\addItem.html" />
-    <None Include="..\helpDocument\Function\cmdOperation.html" />
-    <None Include="..\helpDocument\Function\Constructor.html" />
-    <None Include="..\helpDocument\Function\editItem.html" />
-    <None Include="..\helpDocument\Function\environment.html" />
-    <None Include="..\helpDocument\Function\errHandle.html" />
-    <None Include="..\helpDocument\Function\removeItem.html" />
-    <None Include="..\helpDocument\Manual.html" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CmdOperator.h" />
     <ClInclude Include="..\pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\example.cpp" />
+    <ClCompile Include="..\helper.cpp" />
     <ClCompile Include="..\pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\DocText\detail\addCommand.txt" />
+    <Text Include="..\DocText\detail\commandHandler.txt" />
+    <Text Include="..\DocText\detail\commandHelp.txt" />
+    <Text Include="..\DocText\detail\constructors.txt" />
+    <Text Include="..\DocText\detail\detail.txt" />
+    <Text Include="..\DocText\detail\exitCommandLine.txt" />
+    <Text Include="..\DocText\detail\getEnv.txt" />
+    <Text Include="..\DocText\detail\getHistory.txt" />
+    <Text Include="..\DocText\detail\help.txt" />
+    <Text Include="..\DocText\detail\removeCommand.txt" />
+    <Text Include="..\DocText\detail\replaceCommand.txt" />
+    <Text Include="..\DocText\detail\setEnv.txt" />
+    <Text Include="..\DocText\detail\editHandler.txt" />
+    <Text Include="..\DocText\sysEnv.txt" />
+    <Text Include="..\DocText\usage.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

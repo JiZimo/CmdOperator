@@ -1,0 +1,8 @@
+-原型
+    std::string getEnv(const std::string &name);
+-介绍
+    返回CmdOperator的环境变量name的值（以字符串形式）
+-版本
+    v0.0.1.00003 加入
+-相关
+    关于CmdOperator系统环境变量详见SysEnv命令

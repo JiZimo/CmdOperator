@@ -1,0 +1,12 @@
+-原型
+  commandHandler editCommand(const std::string &str, const commandHandler func);
+  commandHandler editCommand(const std::pair< const std::string, const commandHandler> p);
+  const std::map<const std::string, const commandHandler> editCommand(const std::map<const std::string, const commandHandler> list);
+-介绍
+  编辑命令注册表项，让str命令对应的处理函数为func，不管之前是否存在于命令注册表中
+  第二个原型以std::pair传递参数
+  第三个原型以std::map来进行批量修改
+-版本
+  v1.0.0.00008 加入
+-相关
+	commandHandler

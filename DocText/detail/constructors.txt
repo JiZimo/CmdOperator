@@ -1,0 +1,17 @@
+-原型
+    CmdOperator();
+    (const std::string &_op, const std::function<int(const std::string&)> _eh = nullptr,const std::size_t _size=DEFAULT_HISTORYSIZE, const std::map<std::string, commandHandler> _sheet = {}) 
+-介绍
+    第一个构造函数相当于调用CmdOperator(">")
+    第二个构造函数的参数介绍如下所示：
+        _op std::string类型的命令提示符
+        _eh 错误处理函数（详见setErrHandler）
+        _sheet 提供一个命令注册表来初始化
+        _size 历史记录的容量
+    一般来说_sheet是不建议使用的
+-版本
+    v0.0.1.00003 加入
+    v1.0.0.00007 参数顺序的更改
+-相关
+    setErrHandler
+    

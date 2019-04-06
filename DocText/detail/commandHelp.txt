@@ -1,0 +1,10 @@
+-用法
+  commandHelp 手册页名称
+-介绍
+  列出某一命令的详细帮助
+  可用手册页：
+  ?
+  help
+  detail
+  example
+  SysEnv

@@ -1,0 +1,22 @@
+-用法
+    detail 手册页名称
+-介绍
+    列出某一手册页的详细信息
+    可用手册页：
+    constructor
+    getEnv
+    setEnv
+    getHistory
+	addCommand
+    replaceCommand
+    exitCommandLine
+	removeCommand
+    execute
+    argListType
+    commandHandler
+	setErrHandler
+    ?
+    help
+    detail
+    example
+    SysEnv

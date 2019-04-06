@@ -1,0 +1,9 @@
+-原型
+    std::string setEnv(const std::string &name, const std::string &value);
+-介绍
+    设置CmdOperator环境变量，其中name为变量名，value为变量值
+    注意：不可以设置CmdOperator系统环境变量（即，它是只读的）
+-版本
+    v0.0.1.00003 加入
+-相关
+    关于CmdOperator系统环境变量详见SysEnv命令

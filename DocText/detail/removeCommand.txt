@@ -1,0 +1,8 @@
+-原型
+    int removeCommand(const std::string &index);
+-介绍
+    删除由index指定的命令注册表项，当成功时返回1，失败返回0
+-版本
+    v0.0.1.00003 加入
+-相关
+    无

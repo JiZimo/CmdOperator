@@ -1,0 +1,14 @@
+-原型
+    commandHandler addCommand(const std::string &str, const commandHandler func);
+    commandHandler addCommand(const std::pair< const std::string, const commandHandler> p);
+    const std::map<const std::string, const commandHandler> addCommand(const std::map<const std::string, const commandHandler> list);
+-介绍
+    注册命令，其中str指定该命令的名称，func指定处理该命令的函数
+    第二个函数使用std::pair来传递参数
+    第三个函数用于批量注册函数
+-版本
+    v0.0.1.00003 加入
+	v0.0.1.00008 弃用，现在应当使用editCommand
+-相关
+    commandHandler
+	editCommand
